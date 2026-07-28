@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>User Info Table</h1>
+
+        <div class="input-box">
+
+            <input type="text" id="name" placeholder="Name">
+
+            <input type="number" id="age" placeholder="Age">
+
+            <input type="email" id="email" placeholder="Email">
+
+            <button onclick="addUser()">Add User</button>
+
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
