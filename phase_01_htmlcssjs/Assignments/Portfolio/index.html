@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham Sekhri — AI Engineer &amp; Full-Stack Architect</title>
+    <meta name="description" content="Portfolio of Saksham Sekhri — Computer Science Engineer specializing in AI/ML pipelines, full-stack web applications, and backend microservices.">
+    <meta name="author" content="Saksham Sekhri">
+    
+    <!-- Google Fonts: Inter & Instrument Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&display=swap">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Fallback error trap -->
+    <script>
+        window.onerror = function() {
+            var app = document.getElementById('portfolioApp');
+            if (app) { app.classList.remove('hidden'); app.style.opacity = '1'; }
+            var intro = document.getElementById('introContainer');
+            if (intro) { intro.style.display = 'none'; }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Glowing Custom Cursor Follower -->
+    <div id="cursorFollower" class="cursor-follower"></div>
+
+    <!-- ==========================================================================
+         CINEMATIC INTRO CANVAS & DUAL STACKED CROSSFADE TEXT (UNTOUCHED)
+         ========================================================================== -->
+    <div id="introContainer">
+        <canvas id="introCanvas"></canvas>
+        <div id="textContainer" class="hidden">
+            <span id="glowingTextA" class="glowing-text"></span>
+            <span id="glowingTextB" class="glowing-text"></span>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         PORTFOLIO HOMEPAGE CONTENT & PATTERN (PARV PORTFOLIO DESIGN SYSTEM)
+         ========================================================================== -->
+    <div id="portfolioApp" class="hidden">
+        
+        <!-- Navigation Header -->
+        <header id="header" class="header">
+            <div class="header-inner">
+                <a href="#hero" class="nav-logo">
+                    Saksham<span class="logo-dot">.</span>
+                </a>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#achievements" class="nav-link">Certifications</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <a href="#contact" class="nav-cta magnetic-btn">Let's Talk</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Floating Glassmorphism Hero Navigation Pill (Parv Signature) -->
+        <nav class="hero-floating-nav">
+            <ul class="hero-nav-pill">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Certifications</a></li>
+                <li><a href="#contact" class="pill-cta">Let's Talk</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+
+            <!-- SECTION 1 — HERO (PARV SOOD LUXURY LANDING PATTERN) -->
+            <section id="hero" class="hero">
+                <div class="hero-inner">
+                    <!-- Top Label -->
+                    <span class="hero-label">AI ENGINEER &amp; FULL-STACK ARCHITECT</span>
+
+                    <!-- Main Name Identity (Solid Bold + Instrument Serif Italic) -->
+                    <h1 class="hero-name">
+                        Saksham <span class="hero-name-serif">Sekhri</span>
+                    </h1>
+
+                    <!-- Headline Accent -->
+                    <h2 class="hero-title" style="font-size: clamp(1.4rem, 2.8vw, 2.2rem); font-weight: 600; color: var(--clr-text-primary); margin-bottom: 1rem;" id="typewriterTitle">
+                        Building <span class="hero-title-accent">Smart Software</span> &amp; Scalable Systems.
+                    </h2>
+
+                    <!-- Subtitle / Description Paragraph -->
+                    <p class="hero-subtitle" id="heroDescription">
+                        Third-year B.E. Computer Science Engineering student (AI &amp; ML, CGPA: 8.66/10) at Chitkara University. Building production-grade ML pipelines, full-stack Django/Flask systems, and low-latency REST APIs.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="hero-actions" id="heroActions">
+                        <a href="#projects" class="btn-primary magnetic-btn">Explore My Work &rarr;</a>
+                        <a href="assets/SakshamSekhri-Resume.pdf" download="SakshamSekhri-Resume.pdf" class="btn-outline magnetic-btn">Download Résumé</a>
+                    </div>
+
+                    <!-- Scroll Cue Indicator -->
+                    <div class="hero-scroll-cue">
+                        <span class="scroll-text">Scroll</span>
+                        <span class="scroll-line"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2 — ABOUT -->
+            <section id="about" class="section about scroll-reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-label">01 — About</span>
+                        <h2 class="section-title">A little about me</h2>
+                    </div>
+
+                    <div class="about-full-container">
+                        <div class="about-narrative-col">
+                            <div class="about-text">
+                                <p>I'm <span class="highlight">Saksham Sekhri</span>, a Computer Science Engineering student specializing in Artificial Intelligence &amp; Machine Learning at Chitkara University, Rajpura, Punjab (<span class="highlight">CGPA: 8.66/10</span>).</p>
+                                <p>Experienced in building and deploying full-stack web applications using Django and Flask, and developing machine learning pipelines for real-world financial and healthcare domains. Proficient in Python, SQL, and REST API design, with <span class="highlight">3 live-deployed projects</span> and <span class="highlight">7 industry certifications</span> from Microsoft and Cisco.</p>
+                            </div>
+
+                            <!-- 4 Engineering Pillars Grid -->
+                            <div class="about-pillars-grid">
+                                <div class="pillar-card">
+                                    <div class="pillar-icon">🧠</div>
+                                    <h4 class="pillar-title">AI &amp; ML Pipelines</h4>
+                                    <p class="pillar-desc">Predictive modeling, 30+ engineered technical indicators &amp; walk-forward time-series validation.</p>
+                                </div>
+                                <div class="pillar-card">
+                                    <div class="pillar-icon">⚙️</div>
+                                    <h4 class="pillar-title">Backend Architecture</h4>
+                                    <p class="pillar-desc">High-throughput REST APIs, Django ORM relational schemas &amp; Flask microservices.</p>
+                                </div>
+                                <div class="pillar-card">
+                                    <div class="pillar-icon">🗄️</div>
+                                    <h4 class="pillar-title">Database Models</h4>
+                                    <p class="pillar-desc">Normalized relational and NoSQL databases across PostgreSQL, MySQL, MongoDB &amp; SQLite.</p>
+                                </div>
+                                <div class="pillar-card">
+                                    <div class="pillar-icon">⚡</div>
+                                    <h4 class="pillar-title">Full-Stack Systems</h4>
+                                    <p class="pillar-desc">End-to-end web applications integrated with Razorpay payments, Leaflet.js &amp; OSRM routing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-metrics-col">
+                            <!-- Live Stat Cards -->
+                            <div class="about-stats-grid">
+                                <div class="about-stat-box">
+                                    <span class="about-stat-number" data-target="8.66">8.66</span>
+                                    <span class="about-stat-label">CGPA (AI &amp; ML)</span>
+                                </div>
+                                <div class="about-stat-box">
+                                    <span class="about-stat-number" data-target="3">3+</span>
+                                    <span class="about-stat-label">Deployed Systems</span>
+                                </div>
+                                <div class="about-stat-box">
+                                    <span class="about-stat-number" data-target="7">7+</span>
+                                    <span class="about-stat-label">Industry Certs</span>
+                                </div>
+                            </div>
+
+                            <!-- Verified Credentials Panel -->
+                            <div class="about-highlights-panel">
+                                <h4 class="highlights-title">Verified Credentials</h4>
+                                <div class="highlights-badges">
+                                    <span class="highlight-chip">&check; Azure AI Fundamentals (AI-900)</span>
+                                    <span class="highlight-chip">&check; Azure Fundamentals (AZ-900)</span>
+                                    <span class="highlight-chip">&check; Azure Data Fundamentals (DP-900)</span>
+                                    <span class="highlight-chip">&check; Cisco Modern AI &amp; Security</span>
+                                </div>
+                            </div>
+
+                            <div class="about-actions-row">
+                                <a href="mailto:sakshamsekhri51@gmail.com?subject=Project%20Inquiry%20%2F%20Collaboration%20-%20Saksham%20Sekhri&amp;body=Hi%20Saksham%2C%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you%20regarding..." class="btn-primary magnetic-btn">Email Me &rarr;</a>
+                                <a href="assets/SakshamSekhri-Resume.pdf" download="SakshamSekhri-Resume.pdf" class="btn-outline magnetic-btn">Download Résumé</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3 — SKILLS (CATEGORIZED GLASS CARDS FROM RESUME) -->
+            <section id="skills" class="section skills scroll-reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-label">02 — Skills</span>
+                        <h2 class="section-title">Tools &amp; Technologies</h2>
+                        <p class="section-subtitle">A curated collection of technologies I use to design, develop, and deploy intelligent software systems — from machine learning models to scalable full-stack applications.</p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <!-- Category 1: Languages & Core Concepts -->
+                        <article class="skills-card">
+                            <div class="skills-card-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="skills-card-title">Languages &amp; Core Concepts</h3>
+                            <ul class="skills-tag-list">
+                                <li class="skills-tag">Python</li>
+                                <li class="skills-tag">C++</li>
+                                <li class="skills-tag">Java</li>
+                                <li class="skills-tag">SQL</li>
+                                <li class="skills-tag">JavaScript</li>
+                                <li class="skills-tag">HTML5</li>
+                                <li class="skills-tag">CSS3</li>
+                                <li class="skills-tag">Data Structures &amp; Algorithms</li>
+                                <li class="skills-tag">DBMS</li>
+                                <li class="skills-tag">OOP</li>
+                                <li class="skills-tag">Operating Systems</li>
+                            </ul>
+                        </article>
+
+                        <!-- Category 2: Frameworks & Web Systems -->
+                        <article class="skills-card">
+                            <div class="skills-card-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h3 class="skills-card-title">Frameworks &amp; Backend</h3>
+                            <ul class="skills-tag-list">
+                                <li class="skills-tag">Django</li>
+                                <li class="skills-tag">Flask</li>
+                                <li class="skills-tag">FastAPI</li>
+                                <li class="skills-tag">REST APIs</li>
+                                <li class="skills-tag">Razorpay API</li>
+                                <li class="skills-tag">OSRM API</li>
+                                <li class="skills-tag">Ollama (LLaMA 3)</li>
+                            </ul>
+                        </article>
+
+                        <!-- Category 3: ML & Data Science -->
+                        <article class="skills-card">
+                            <div class="skills-card-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"></path>
+                                    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="skills-card-title">ML &amp; Data Science</h3>
+                            <ul class="skills-tag-list">
+                                <li class="skills-tag">NumPy</li>
+                                <li class="skills-tag">Pandas</li>
+                                <li class="skills-tag">Scikit-learn</li>
+                                <li class="skills-tag">XGBoost</li>
+                                <li class="skills-tag">LightGBM</li>
+                                <li class="skills-tag">TensorFlow</li>
+                                <li class="skills-tag">Matplotlib</li>
+                                <li class="skills-tag">Seaborn</li>
+                                <li class="skills-tag">Plotly</li>
+                                <li class="skills-tag">yfinance</li>
+                            </ul>
+                        </article>
+
+                        <!-- Category 4: Databases, Tools & Cloud -->
+                        <article class="skills-card">
+                            <div class="skills-card-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="skills-card-title">Databases &amp; Tools</h3>
+                            <ul class="skills-tag-list">
+                                <li class="skills-tag">PostgreSQL</li>
+                                <li class="skills-tag">MySQL</li>
+                                <li class="skills-tag">SQLite</li>
+                                <li class="skills-tag">MongoDB</li>
+                                <li class="skills-tag">Git</li>
+                                <li class="skills-tag">GitHub</li>
+                                <li class="skills-tag">Render</li>
+                                <li class="skills-tag">Postman</li>
+                                <li class="skills-tag">VS Code</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4 — PROJECTS (EXACT RESUME PROJECTS) -->
+            <section id="projects" class="section projects scroll-reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-label">03 — Projects</span>
+                        <h2 class="section-title">Featured Work</h2>
+                        <p class="section-subtitle">Production-grade systems deployed live across healthcare AI, entertainment booking platforms, and financial signal prediction engines.</p>
+                    </div>
+
+                    <!-- Filter Controls -->
+                    <div class="projects-filters">
+                        <button class="projects-filter active" data-filter="all">All</button>
+                        <button class="projects-filter" data-filter="full-stack">Full Stack</button>
+                        <button class="projects-filter" data-filter="ai-health">AI &amp; Health</button>
+                        <button class="projects-filter" data-filter="ml-finance">ML &amp; Finance</button>
+                    </div>
+
+                    <!-- Projects Grid -->
+                    <div class="projects-grid">
+                        
+                        <!-- Project 1: RevRoots -->
+                        <article class="projects-card" data-category="full-stack" data-id="1">
+                            <div class="projects-card-media">
+                                <img src="assets/project1.jpg" alt="RevRoots — Movie Discovery, Reviews & Ticket Booking Platform">
+                            </div>
+                            <div class="projects-card-body">
+                                <span class="projects-card-year">2026 &bull; LIVE ON RENDER</span>
+                                <h3 class="projects-card-title">RevRoots</h3>
+                                <p class="projects-card-desc">Comprehensive movie platform where users browse movies, view trailers, rate and comment on titles, explore genre categories, and complete live seat selection &amp; ticket booking with Razorpay webhook payment verification across 5 normalized MySQL models.</p>
+                                
+                                <ul class="projects-card-tags">
+                                    <li class="projects-card-tag">Django</li>
+                                    <li class="projects-card-tag">Flask</li>
+                                    <li class="projects-card-tag">Python</li>
+                                    <li class="projects-card-tag">MySQL</li>
+                                    <li class="projects-card-tag">Razorpay API</li>
+                                    <li class="projects-card-tag">Render</li>
+                                </ul>
+
+                                <div class="projects-card-links">
+                                    <button class="projects-card-link view-project-btn magnetic-btn">View Specification &rarr;</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 2: MediColl -->
+                        <article class="projects-card" data-category="ai-health" data-id="2">
+                            <div class="projects-card-media">
+                                <img src="assets/project3.jpg" alt="MediColl — AI Medical Assistance Platform">
+                            </div>
+                            <div class="projects-card-body">
+                                <span class="projects-card-year">2026 &bull; AI HEALTHCARE</span>
+                                <h3 class="projects-card-title">MediColl</h3>
+                                <p class="projects-card-desc">Full-stack AI healthcare platform where patients describe symptoms and receive medical guidance via a locally running LLaMA 3 model (Ollama), real-time nearest hospital navigation using Leaflet.js &amp; OSRM API, and JWT health record management.</p>
+
+                                <ul class="projects-card-tags">
+                                    <li class="projects-card-tag">Django</li>
+                                    <li class="projects-card-tag">Python</li>
+                                    <li class="projects-card-tag">MySQL</li>
+                                    <li class="projects-card-tag">Ollama (LLaMA 3)</li>
+                                    <li class="projects-card-tag">Leaflet.js</li>
+                                    <li class="projects-card-tag">OSRM API</li>
+                                </ul>
+
+                                <div class="projects-card-links">
+                                    <button class="projects-card-link view-project-btn magnetic-btn">View Specification &rarr;</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 3: Bank Trend Predictor -->
+                        <article class="projects-card" data-category="ml-finance" data-id="3">
+                            <div class="projects-card-media">
+                                <img src="assets/project2.jpg" alt="Bank Trend Predictor — ML Financial Signal System">
+                            </div>
+                            <div class="projects-card-body">
+                                <span class="projects-card-year">2026 &bull; ML SIGNAL SYSTEM</span>
+                                <h3 class="projects-card-title">Bank Trend Predictor</h3>
+                                <p class="projects-card-desc">Production-grade ML pipeline predicting 5-day directional price trends for 10 major NSE banking stocks with 30+ engineered technical features (RSI-14, MACD, Bollinger Bands, ATR%), achieving 70–73% directional accuracy backtested on INR 1,00,000 paper trading.</p>
+
+                                <ul class="projects-card-tags">
+                                    <li class="projects-card-tag">Python</li>
+                                    <li class="projects-card-tag">Scikit-learn</li>
+                                    <li class="projects-card-tag">XGBoost</li>
+                                    <li class="projects-card-tag">LightGBM</li>
+                                    <li class="projects-card-tag">Pandas</li>
+                                    <li class="projects-card-tag">yfinance</li>
+                                </ul>
+
+                                <div class="projects-card-links">
+                                    <button class="projects-card-link view-project-btn magnetic-btn">View Specification &rarr;</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5 — EXPERIENCE (EXACT RESUME DATA) -->
+            <section id="experience" class="section experience scroll-reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-label">04 — Experience</span>
+                        <h2 class="section-title">Leadership &amp; Operations</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">JUNE 2026 — PRESENT</div>
+                            <h3 class="timeline-role">Management Team Member</h3>
+                            <div class="timeline-company">BroCode &ndash; Cultural &amp; Events Club &bull; Chitkara University</div>
+                            <ul class="timeline-bullets">
+                                <li>Contribute to the planning and logistics of cultural and technical events organized by the club at Chitkara University.</li>
+                                <li>Coordinate with fellow team members on volunteer management, event setup, and on-ground operations to ensure smooth execution.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6 — CERTIFICATIONS (ALL 7 RESUME CERTS) -->
+            <section id="achievements" class="section achievements scroll-reveal">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-label">05 — Certifications</span>
+                        <h2 class="section-title">7 Industry Certifications</h2>
+                    </div>
+
+                    <div class="achievements-grid">
+                        <article class="achievement-card">
+                            <span class="achievement-number">MICROSOFT CERTIFIED</span>
+                            <h3 class="achievement-title">3x Microsoft Azure Certifications</h3>
+                            <p class="achievement-text">Industry-recognized credentials validating core cloud infrastructure, AI architecture, and data engineering expertise.</p>
+                            <div class="cert-badges">
+                                <span class="cert-badge">&check; Azure AI Fundamentals (AI-900)</span>
+                                <span class="cert-badge">&check; Azure Fundamentals (AZ-900)</span>
+                                <span class="cert-badge">&check; Azure Data Fundamentals (DP-900)</span>
+                            </div>
+                        </article>
+
+                        <article class="achievement-card">
+                            <span class="achievement-number">CISCO CERTIFIED</span>
+                            <h3 class="achievement-title">4x Cisco Industry Certifications</h3>
+                            <p class="achievement-text">Professional credentials spanning artificial intelligence applications, cybersecurity fundamentals, and IoT systems.</p>
+                            <div class="cert-badges">
+                                <span class="cert-badge">&check; Introduction to Modern AI</span>
+                                <span class="cert-badge">&check; Apply AI: Analyze Customer Reviews</span>
+                                <span class="cert-badge">&check; Introduction to Cybersecurity</span>
+                                <span class="cert-badge">&check; Introduction to IoT</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7 — DEVELOPMENT PHILOSOPHY -->
+            <section id="philosophy" class="section philosophy scroll-reveal">
+                <div class="container">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <span class="section-label">06 — Mindset</span>
+                        <h2 class="section-title">Development Philosophy</h2>
+                    </div>
+
+                    <div class="philosophy-card">
+                        <blockquote class="philosophy-quote">
+                            "Great software is an art form. It must be mathematically sound under the hood, yet feel effortless and captivating to the human touch. My goal is to craft digital products that solve real-world challenges through elegant architecture."
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 8 — CONTACT (WITH ALL EXACT USER LINKS & PHONE) -->
+            <section id="contact" class="section contact scroll-reveal">
+                <div class="container">
+                    <div class="contact-wrapper">
+                        <span class="section-label">07 — Contact</span>
+                        <h2 class="section-title">Let's Shape The Future Together</h2>
+                        <p class="section-subtitle" style="margin-bottom: 1.5rem;">Based in Rajpura, Punjab, India &bull; Phone: +91 9317713771</p>
+
+                        <div class="contact-buttons-grid">
+                            <a href="mailto:sakshamsekhri51@gmail.com?subject=Project%20Inquiry%20%2F%20Collaboration%20-%20Saksham%20Sekhri&amp;body=Hi%20Saksham%2C%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you%20regarding..." class="btn-primary magnetic-btn contact-btn">
+                                <span>Email Me &rarr;</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saksham-sekhri-80a508338" target="_blank" rel="noopener" class="btn-outline magnetic-btn contact-btn">
+                                <span>LinkedIn &rarr;</span>
+                            </a>
+                            <a href="https://github.com/SakshamSekhri" target="_blank" rel="noopener" class="btn-outline magnetic-btn contact-btn">
+                                <span>GitHub &rarr;</span>
+                            </a>
+                            <a href="assets/SakshamSekhri-Resume.pdf" download="SakshamSekhri-Resume.pdf" class="btn-outline magnetic-btn contact-btn">
+                                <span>Résumé <svg class="download-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <p class="footer-quote">&ldquo;Great software isn't just written — it's crafted.&rdquo;</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/SakshamSekhri" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/saksham-sekhri-80a508338" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:sakshamsekhri51@gmail.com?subject=Project%20Inquiry%20%2F%20Collaboration%20-%20Saksham%20Sekhri&amp;body=Hi%20Saksham%2C%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you%20regarding...">Email</a>
+                </div>
+                <p class="footer-copyright">&copy; 2026 Saksham Sekhri. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Project Modal Dialog -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-modal">&times;</button>
+            <img id="modalImage" src="" alt="" class="modal-img">
+            <div class="modal-body">
+                <span id="modalCategory" class="projects-card-year" style="font-size: 0.85rem;"></span>
+                <h2 id="modalTitle" class="projects-card-title" style="margin-top: 0.5rem; font-size: 1.8rem;"></h2>
+                <div id="modalSubtitle" style="color: var(--clr-accent); font-weight: 600; margin-bottom: 1rem;"></div>
+                <p id="modalDescription" class="projects-card-desc" style="margin-top: 1rem;"></p>
+                
+                <h4 style="font-size: 0.85rem; letter-spacing: 0.1em; color: var(--clr-accent); margin-top: 1.5rem; text-transform: uppercase;">Key Features</h4>
+                <div id="modalFeatures" class="skills-tag-list" style="margin-top: 0.6rem;"></div>
+
+                <h4 style="font-size: 0.85rem; letter-spacing: 0.1em; color: var(--clr-accent); margin-top: 1.5rem; text-transform: uppercase;">Technologies Used</h4>
+                <div id="modalTech" class="projects-card-tags" style="margin-top: 0.6rem;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Engine Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
